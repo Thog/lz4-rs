@@ -340,6 +340,8 @@ extern "C" {
     // int LZ4_freeStreamDecode(LZ4_streamDecode_t* LZ4_stream)
     pub fn LZ4_freeStreamDecode(LZ4_stream: *mut LZ4StreamDecode) -> i32;
 
+    // int LZ4_compress_default(const char* src, char* dst, int srcSize, int dstCapacity);
+    pub fn LZ4_compress_default(source: *const u8, dest: *mut u8, src_size: i32, dst_capacity: i32) -> i32;
 }
 
 #[test]
